@@ -1,9 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -118,7 +118,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: black;
   z-index: 100;
 }
@@ -134,7 +134,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-70%, -50%);
-  width: 750px;
+  width: 768px;
   margin: 0 10%;
   max-width: 80%;
   /* text-align: center; */
@@ -182,12 +182,12 @@ h1 {
   background: linear-gradient(#fff, #aaa);
   color: #000;
   text-align: center;
-  box-shadow: 0 4px 4px 4px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 table {
   margin-top: 100px;
-  width: 750px;
+  width: 800px;
   border-collapse: collapse;
 }
 
@@ -195,13 +195,15 @@ table button {
   color: #333;
 }
 
-td, th {
+td,
+th {
   padding: 25px 20px;
   border-bottom: 1px solid #333;
   text-align: center;
   white-space: nowrap;
 }
-td:first-child, th:first-child {
+td:first-child,
+th:first-child {
   text-align: left;
   width: 100%;
 }
@@ -251,11 +253,11 @@ tr:last-child td {
   height: 56px;
   width: 56px;
   cursor: pointer;
-  box-shadow: 0 0 4px 4px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .btn-close {
-  position:absolute;
+  position: absolute;
   right: 4px;
   top: 4px;
   background: none;
@@ -263,5 +265,33 @@ tr:last-child td {
   color: red;
   font-size: 40px;
   padding: 4px 8px;
-  cursor: pointer
+  cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+  main {
+    padding: 6rem 3rem !important;
+  }
+  table {
+    width: calc(100vw - 6rem);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  td {
+    padding: 25px 8px;
+  }
+}
+
+@media screen and (max-width: 467px) {
+  main {
+    padding: 6rem 1rem !important;
+  }
+
+  table {
+    width: calc(100vw - 2rem);
+  }
+  td {
+    padding: 24px 4px;
+  }
 }
